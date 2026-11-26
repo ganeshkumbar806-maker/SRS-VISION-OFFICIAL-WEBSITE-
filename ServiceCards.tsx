@@ -1,0 +1,3 @@
+import { services } from "@/lib/site";
+import { iconMap, ArrowUpRight } from "./Icons";
+export default function ServiceCards(){return <div className="service-grid">{services.map(s=>{const Icon=iconMap[s.icon];return <article className="service-card" key={s.number}><div className="service-card-top"><span className="service-number">{s.number}</span><span className="icon-tile"><Icon size={22}/></span></div><h3>{s.title}</h3><p>{s.description}</p><a href="#contact" className="text-link">Discuss your project <ArrowUpRight size={16}/></a></article>})}</div>}
